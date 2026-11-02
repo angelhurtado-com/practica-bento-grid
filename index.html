@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bento Grid Apple - MacBook Pro</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- NIVEL 1 DE GRID: 3 Columnas principales -->
+    <main class="bento-container">
+
+        <!-- COLUMNA 1 (Izquierda) -->
+        <section class="bento-col bento-col-1">
+            
+            <!-- Bateria (Ocupa toda la fila) -->
+            <div class="card span-full battery-card">
+                <span>Up to <mark class="green-badge">21 hours</mark> battery life</span>
+            </div>
+
+            <!-- Rendimiento (2 Celdas individuales) -->
+            <div class="card">
+                <p class="label">Up to</p>
+                <h2>2x</h2>
+                <p>faster storage</p>
+            </div>
+            <div class="card">
+                <p class="label">Up to</p>
+                <h2>11x</h2>
+                <p>faster ML</p>
+            </div>
+
+            <!-- Pantalla XDR (Ocupa toda la fila y es estilo oscuro) -->
+            <div class="card span-full xdr-card">
+                <p class="xdr-title">Liquid Retina XDR display</p>
+                <h1 class="xdr-text">XDR</h1>
+            </div>
+
+            <!-- Tamaños de pantalla -->
+            <div class="card span-full display-sizes-card">
+                <p class="label">Two display sizes</p>
+                <div class="sizes">
+                    <span>16"</span>
+                    <span>14"</span>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- COLUMNA 2 (Centro - Hero principal) -->
+        <section class="bento-col bento-col-2">
+            
+            <!-- Sub-grid superior (3 ítems pequeños) -->
+            <div class="card">
+                <p class="label">Up to</p>
+                <h2>3.7x</h2>
+                <p>faster CPU</p>
+            </div>
+            <div class="card">
+                <p class="card-desc">Six-speaker sound system with spatial audio</p>
+            </div>
+            <div class="card">
+                <p class="label">Up to</p>
+                <h2>13x</h2>
+                <p>faster graphics</p>
+            </div>
+
+            <!-- Celda Principal / Hero Image (Ocupa las 3 columnas del sub-grid) -->
+            <div class="card span-full hero-card">
+                <img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=1000&auto=format&fit=crop" alt="MacBook Pro" class="hero-img">
+            </div>
+
+            <!-- Sub-grid inferior -->
+            <div class="card">
+                <p>Drives over 75 million pixels</p>
+            </div>
+            <div class="card chip-card">
+                <div class="chip">M1 PRO</div>
+                <div class="chip">M1 MAX</div>
+            </div>
+            <div class="card">
+                <p class="label">Magic Keyboard</p>
+            </div>
+
+        </section>
+
+        <!-- COLUMNA 3 (Derecha) -->
+        <section class="bento-col bento-col-3">
+            
+            <!-- Térmica (Ocupa toda la fila) -->
+            <div class="card span-full">
+                <h2>Advanced <span class="blue-text">thermal</span> architecture</h2>
+            </div>
+
+            <!-- Memoria -->
+            <div class="card">
+                <p class="label">Up to</p>
+                <h2>8TB</h2>
+                <p>storage</p>
+            </div>
+            <div class="card">
+                <p class="label">Up to</p>
+                <h2>64GB</h2>
+                <p>memory</p>
+            </div>
+
+            <!-- Pantalla y Cámara -->
+            <div class="card">
+                <div class="circle-badge">ProMotion</div>
+            </div>
+            <div class="card">
+                <h2>1080p</h2>
+                <p>FaceTime HD camera</p>
+            </div>
+
+            <!-- macOS Monterey (Banner Gradiente) -->
+            <div class="card span-full monterey-card">
+                <h2>macOS Monterey</h2>
+            </div>
+
+            <!-- Puertos (Ocupa toda la fila) -->
+            <div class="card span-full ports-card">
+                <span>HDMI</span>
+                <span>Thunderbolt 4</span>
+                <span>SDXC</span>
+            </div>
+
+            <!-- Mics y MagSafe -->
+            <div class="card">
+                <p>Studio-quality mics</p>
+            </div>
+            <div class="card">
+                <p>MagSafe 3</p>
+            </div>
+
+        </section>
+
+    </main>
+
+</body>
+</html>

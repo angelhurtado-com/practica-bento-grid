@@ -1,0 +1,202 @@
+@import "variables.css";
+
+/* Reset general */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family:
+    -apple-system, BlinkMacSystemFont, "SF Pro Display", "Inter", sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-primary);
+  padding: 2rem 1rem;
+  min-height: 100vh;
+  transition:
+    background-color 0.4s ease,
+    color 0.4s ease;
+}
+
+.bento-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+  max-width: 1300px;
+  margin: 0 auto;
+
+  @media (min-width: 700px) {
+    grid-template-columns: 1fr 1.6fr 1fr;
+  }
+}
+
+.bento-col {
+  display: grid;
+  gap: 1.25rem;
+  align-content: start;
+}
+
+/* Sub-grid de la Columna 1 y Columna 3 (2 sub-columnas internas) */
+.bento-col-1,
+.bento-col-3 {
+  grid-template-columns: repeat(2, 1fr);
+
+  /* Celdas que abarcan toda la fila interna */
+  .span-full {
+    grid-column: 1 / -1;
+  }
+}
+
+/* Sub-grid de la Columna 2 Central (3 sub-columnas internas) */
+.bento-col-2 {
+  grid-template-columns: repeat(3, 1fr);
+
+  .span-full {
+    grid-column: 1 / -1;
+  }
+}
+
+/* ==========================================================================
+   ESTILOS BASE DE LAS TARJETAS BENTO Y ANIMACIONES ANIDADAS
+   ========================================================================== */
+.card {
+  background-color: var(--card-bg);
+  border-radius: var(--card-radius);
+  padding: 1.25rem;
+  box-shadow: var(--card-shadow);
+  border: 1px solid var(--border-subtle);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+
+  transition:
+    transform 0.3s cubic-bezier(0.25, 1, 0.5, 1),
+    box-shadow 0.3s ease,
+    border-color 0.3s ease;
+
+  &:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
+    border-color: rgba(0, 102, 204, 0.4);
+  }
+
+  h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+  }
+
+  p {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+  }
+
+  .label {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+}
+
+.battery-card {
+  font-size: 1.1rem;
+  font-weight: 600;
+
+  .green-badge {
+    background-color: var(--accent-green);
+    color: #ffffff;
+    padding: 0.2rem 0.6rem;
+    border-radius: 20px;
+  }
+}
+
+/* Pantalla XDR */
+.xdr-card {
+  background-color: var(--xdr-bg);
+  color: #ffffff;
+  min-height: 180px;
+
+  .xdr-title {
+    font-size: 0.8rem;
+    color: #86868b;
+  }
+
+  .xdr-text {
+    font-size: 4rem;
+    font-weight: 900;
+    background: linear-gradient(180deg, #ffffff 0%, #3a3a3c 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
+
+/* Imagen Hero Central */
+.hero-card {
+  padding: 0;
+  min-height: 220px;
+
+  .hero-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+/* Chips M1 Pro / M1 Max */
+.chip-card {
+  flex-direction: row;
+  gap: 0.5rem;
+
+  .chip {
+    background-color: #000000;
+    color: #ffffff;
+    padding: 0.8rem 0.5rem;
+    border-radius: 8px;
+    font-size: 0.75rem;
+    font-weight: 700;
+  }
+}
+
+/* Banner macOS Monterey */
+.monterey-card {
+  background: var(--gradient-monterey);
+  color: #ffffff;
+  padding: 1.5rem;
+
+  h2 {
+    font-size: 1.3rem;
+    font-weight: 600;
+  }
+}
+
+/* Texto Azul Acento */
+.blue-text {
+  color: var(--accent-blue);
+}
+
+/* Badge circular ProMotion */
+.circle-badge {
+  border: 2px dashed var(--accent-blue);
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.7rem;
+  font-weight: 600;
+}
+
+/* Puertos */
+.ports-card {
+  flex-direction: row;
+  justify-content: space-around;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
